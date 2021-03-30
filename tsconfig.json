@@ -15,7 +15,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "strict": false,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@views/*": ["./src/views/*"],
+      "@reducers/*": ["./src/redux/reducers/*"],
+      "@sagas/*": ["./src/redux/sagas/*"],
+      "@API/*": ["./src/redux/api/*"],
+      "@config/*": ["./src/configurations/*"]
+    }
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

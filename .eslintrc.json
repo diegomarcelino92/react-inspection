@@ -24,12 +24,23 @@
   "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
   "rules": {
     "prettier/prettier": "error",
+
+    "react/prop-types": [0],
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "warn",
+
+    "react/jsx-props-no-spreading": [0],
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+
     "import/extensions": "off",
     "import/no-unresolved": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
-    "@typescript-eslint/no-var-requires": "off"
+
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-var-requires": "off",
+
+    "no-use-before-define": "off",
+    "no-undef": [0],
+    "import/prefer-default-export": "off"
   }
 }
