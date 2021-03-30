@@ -15,14 +15,14 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/dist/',
+    filename: 'static/[name].[fullhash].js',
+    publicPath: '/',
   },
   optimization: {
-    // splitChunks: {
-    //   // include all types of chunks
-    //   chunks: 'all',
-    // },
+    splitChunks: {
+      // include all types of chunks
+      chunks: 'all',
+    },
   },
   module: {
     rules: [
@@ -48,8 +48,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
-      filename: 'index.html',
-      inject: 'body',
+      inject: true,
     }),
   ],
   resolve: {
@@ -59,7 +58,7 @@ module.exports = {
 
   devServer: {
     contentBase: path.join(__dirname, 'public'),
-    publicPath: 'http://localhost:3000/static/',
+    publicPath: '/',
     compress: true,
     port: 3000,
     open: true,
