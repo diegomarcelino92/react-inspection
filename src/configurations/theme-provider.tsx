@@ -4,6 +4,7 @@ import {
   DefaultTheme,
   ThemeProvider as StyledThemeProvider,
 } from 'styled-components';
+import { GlobalStyles } from './global-styles';
 
 const pallets = {
   light: {
@@ -43,6 +44,7 @@ const ThemeProvider: React.FC = ({ children }) => {
   return (
     <ThemeContext.Provider value={{ themeMode, changeTheme }}>
       <StyledThemeProvider theme={theme(themeMode)}>
+        <GlobalStyles />
         {children}
       </StyledThemeProvider>
     </ThemeContext.Provider>
