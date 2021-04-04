@@ -10,3 +10,16 @@
 ## Script Disponíveis
 
 Na raiz do projeto:
+
+### `yarn install | yarn`
+
+Instalação das dependências.
+
+### `yarn dev`
+
+Roda aplicação em desenvolvimento.
+Abra [http://localhost:3000](http://localhost:3000) .
+
+### `yarn build`
+
+Gera um build de production com babel e webpack.
